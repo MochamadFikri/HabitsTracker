@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">HabitsTracker</string>
+
+
+    <string name="Splash1">Habits Tracker</string>
+    <string name="Splash2">Splash Screen</string>
+
+    <string name="welcome1">Jadwalkan dan Ingatkan Kapanpun</string>
+    <string name="welcome2">Habits Tracker adalah aplikasi untuk membangun sebuah Habit dengan cara menjadwalkan, mengingatkan dan memantau kegiatan anda sehingga menjadi sebuah habit.</string>
+    <string name="welcome3">Tapi apa itu Habits ?</string>
+    <string name="welcome4">Habits adalah segala sesuatu yang kita lakukan secara otomatis, bahkan kita melakukannya tanpa berpikir atau suatu aktifitas yang dilakukan terus menerus sehingga menjadi bagian dari kita.</string>
+    <string name="welcome5">" Kita adalah apa yang kita kerjakan berulang-ulang, karena itu keunggulan bukanlah suatu perbuatan, melainkan kebiasaan " </string>
+    <string name="welcome6">Aristoteles</string>
+    <string name="welcome7">Mari Kita Mulai !</string>
 </resources>

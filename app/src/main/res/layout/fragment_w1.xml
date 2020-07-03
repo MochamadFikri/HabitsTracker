@@ -5,12 +5,24 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen72"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fragment 1"
-            android:textSize="@dimen/dimen50"
+            android:text="@string/welcome1"
+            android:textSize="30sp"
+            android:fontFamily="@font/quicksandbold"
+            android:layout_marginBottom="@dimen/dimen10"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome2"
+            android:fontFamily="@font/quicksandregular"
+
             />
     </LinearLayout>
 

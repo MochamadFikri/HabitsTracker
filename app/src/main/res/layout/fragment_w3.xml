@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dimen72"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fragment 1"
-            android:textSize="@dimen/dimen50"
+            android:gravity="center"
+            android:text="@string/welcome5"
+            android:textSize="20sp"
+            android:fontFamily="@font/quicksandregular"
+            android:layout_marginBottom="@dimen/dimen10"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome6"
+            android:textSize="@dimen/dimen20"
+            android:fontFamily="@font/quicksandbold"
+
+            />
+        <Button
+            android:id="@+id/btn_lanjut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome7"
+            android:layout_marginTop="@dimen/dimen100"
             />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
