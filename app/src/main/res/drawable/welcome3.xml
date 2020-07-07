@@ -6,7 +6,7 @@
                 android:bottomRightRadius="@dimen/dimen40"
                 />
             <solid
-                android:color="#D7722C"
+                android:color="#006A4E"
                 />
         </shape>
     </item>

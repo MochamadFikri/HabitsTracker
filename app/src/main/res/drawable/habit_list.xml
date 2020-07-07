@@ -3,11 +3,10 @@
     <item>
         <shape>
             <corners
-                android:topLeftRadius="@dimen/dimen20"
-                android:topRightRadius="@dimen/dimen20"
+                android:radius="@dimen/dimen20"
                 />
             <solid
-                android:color="#FFF"
+                android:color="#8ABAAE"
                 />
         </shape>
     </item>
