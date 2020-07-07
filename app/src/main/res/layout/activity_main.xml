@@ -5,240 +5,28 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#FFF">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/welcome2_layout"
+    <LinearLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFF"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         >
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <FrameLayout
+            android:id="@+id/content"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:paddingBottom="@dimen/dimen20"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+
+        </FrameLayout>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:background="#006A4E"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:paddingTop="@dimen/dimen30"
-            >
-            <TextView
-                android:id="@+id/hari"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="SELASA"
-                app:layout_constraintBottom_toTopOf="@id/tanggal"
-                android:fontFamily="@font/quicksandbold"
-                android:textColor="#FFF"
-                android:textSize="20sp"
-                tools:ignore="MissingConstraints" />
-            <TextView
-                android:id="@+id/tanggal"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="07 Juli 2020"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:fontFamily="@font/quicksandbold"
-                android:textColor="#FFF"
-                android:textSize="50sp"
-                tools:ignore="MissingConstraints" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#006A4E"
-        app:layout_constraintTop_toBottomOf="@id/welcome2_layout"
-        app:layout_constraintStart_toStartOf="parent"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="@dimen/dimen30"
-            android:background="@drawable/welcome2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Kegiatan hari ini : "
-                android:textSize="20sp"
-                android:padding="@dimen/dimen10"
-                />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:background="@drawable/habit_list"
-                android:padding="@dimen/dimen20"
-                android:layout_margin="@dimen/dimen5"
-                >
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/dimen10"
-                    android:layout_weight="1"
-                    />
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="5"
-                    >
-                <TextView
-                    android:id="@+id/welcome2_atas"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Solat Subuh"
-                    android:textSize="30sp"
-                    android:textColor="#FFF"
-                    android:fontFamily="@font/quicksandbold"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Harian pada pukul 04.00 AM"
-                    app:layout_constraintTop_toBottomOf="@id/welcome2_atas"
-                    app:layout_constraintStart_toStartOf="parent"
-                    android:fontFamily="@font/quicksandregular"
-                    />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:background="@drawable/habit_list"
-                android:padding="@dimen/dimen20"
-                android:layout_margin="@dimen/dimen5"
-                >
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/dimen10"
-                    android:layout_weight="1"
-                    />
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="5"
-                    >
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Belajar Pagi"
-                        android:textSize="30sp"
-                        android:textColor="#FFF"
-                        android:fontFamily="@font/quicksandbold"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Harian pada pukul 06.00 AM"
-                        app:layout_constraintTop_toBottomOf="@id/welcome2_atas"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:fontFamily="@font/quicksandregular"
-                        />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:background="@drawable/habit_list"
-                android:padding="@dimen/dimen20"
-                android:layout_margin="@dimen/dimen5"
-                >
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/dimen10"
-                    android:layout_weight="1"
-                    />
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="5"
-                    >
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Lari Pagi"
-                        android:textSize="30sp"
-                        android:textColor="#FFF"
-                        android:fontFamily="@font/quicksandbold"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Mingguan pada pukul 07.00 AM"
-                        app:layout_constraintTop_toBottomOf="@id/welcome2_atas"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:fontFamily="@font/quicksandregular"
-                        />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:background="@drawable/habit_list"
-                android:padding="@dimen/dimen20"
-                android:layout_margin="@dimen/dimen5"
-                >
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/dimen10"
-                    android:layout_weight="1"
-                    />
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="5"
-                    >
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Tidur SIang"
-                        android:textSize="30sp"
-                        android:textColor="#FFF"
-                        android:fontFamily="@font/quicksandbold"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Harian pada pukul 01.00 PM"
-                        app:layout_constraintTop_toBottomOf="@id/welcome2_atas"
-                        app:layout_constraintStart_toStartOf="parent"
-                        android:fontFamily="@font/quicksandregular"
-                        />
-                </LinearLayout>
-            </LinearLayout>
-
-        </LinearLayout>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            app:menu="@menu/navigation"
+            app:itemTextColor="#FFF"
+            />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
