@@ -18,6 +18,11 @@ class MainActivity : AppCompatActivity() {
                 addFragment(fragment)
                 return@OnNavigationItemSelectedListener true
             }
+            R.id.nav_list -> {
+                val fragment = Fragment_list.newInstance()
+                addFragment(fragment)
+                return@OnNavigationItemSelectedListener true
+            }
         }
         false
     }
