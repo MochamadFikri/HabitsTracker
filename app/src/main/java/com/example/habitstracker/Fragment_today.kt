@@ -10,13 +10,16 @@ import kotlinx.android.synthetic.main.fragment_today.*
 import java.text.SimpleDateFormat
 
 class Fragment_today : Fragment() {
-
-    var currentTime: String = SimpleDateFormat("dd mm yyyy", java.util.Locale.getDefault()).format(
+    var currentDay : String = SimpleDateFormat("E", java.util.Locale.getDefault()).format(
+        java.util.Date()
+    )
+    var currentDate: String = SimpleDateFormat("dd M yyyy", java.util.Locale.getDefault()).format(
         java.util.Date()
     )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        tanggal.setText(currentTime)
+        hari.setText(currentDay)
+        tanggal.setText(currentDate)
         super.onViewCreated(view, savedInstanceState)
     }
 
