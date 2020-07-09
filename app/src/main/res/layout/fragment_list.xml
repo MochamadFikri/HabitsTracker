@@ -17,36 +17,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:paddingBottom="@dimen/dimen20"
-            android:background="#2E856E"
-            android:paddingTop="@dimen/dimen30"
-            >
-            <TextView
-                android:id="@+id/hari"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="SELASA"
-                android:fontFamily="@font/quicksandbold"
-                android:textColor="#FFF"
-                android:textSize="15sp"
-                tools:ignore="MissingConstraints" />
-            <TextView
-                android:id="@+id/tanggal"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="07 Juli 2020"
-                android:fontFamily="@font/quicksandbold"
-                android:textColor="#FFF"
-                android:textSize="30sp"
-                tools:ignore="MissingConstraints" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:background="#2E856E"
             android:orientation="vertical"
             >
@@ -160,39 +130,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Mingguan pada pukul 07.00 AM"
-                            android:textSize="10sp"
-                            android:fontFamily="@font/quicksandregular"
-                            />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center"
-                    android:background="@drawable/habit_list"
-                    android:padding="@dimen/dimen20"
-                    android:layout_margin="@dimen/dimen5"
-                    >
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_weight="5"
-                        >
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Tidur SIang"
-                            android:textSize="20sp"
-                            android:textColor="#FFF"
-                            android:fontFamily="@font/quicksandbold"
-                            />
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Harian pada pukul 01.00 PM"
                             android:textSize="10sp"
                             android:fontFamily="@font/quicksandregular"
                             />

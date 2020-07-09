@@ -182,46 +182,6 @@
                             />
                     </LinearLayout>
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center"
-                    android:background="@drawable/habit_list"
-                    android:padding="@dimen/dimen20"
-                    android:layout_margin="@dimen/dimen5"
-                    >
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/dimen10"
-                        android:layout_weight="1"
-                        />
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_weight="5"
-                        >
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Tidur SIang"
-                            android:textSize="20sp"
-                            android:textColor="#FFF"
-                            android:fontFamily="@font/quicksandbold"
-                            />
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Harian pada pukul 01.00 PM"
-                            android:textSize="10sp"
-                            android:fontFamily="@font/quicksandregular"
-                            />
-                    </LinearLayout>
-                </LinearLayout>
-
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
