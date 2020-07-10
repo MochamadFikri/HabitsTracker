@@ -10,13 +10,19 @@
         android:gravity="center"
         android:orientation="vertical"
         android:padding="@dimen/dimen72"
+        android:background="#FFF"
         >
+        <ImageView
+            android:layout_width="@dimen/dimen200"
+            android:layout_height="@dimen/dimen200"
+            android:background="@drawable/applogo"
+            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/welcome5"
-            android:textSize="20sp"
+            android:textSize="@dimen/dimen15"
             android:fontFamily="@font/quicksandregular"
             android:layout_marginBottom="@dimen/dimen10"
             />
@@ -32,8 +38,13 @@
             android:id="@+id/btn_lanjut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/welcome7"
-            android:layout_marginTop="@dimen/dimen100"
+            android:text="Mulai"
+            android:layout_marginTop="@dimen/dimen40"
+            android:textColor="#FFF"
+            android:fontFamily="@font/quicksandbold"
+            android:padding="@dimen/dimen5"
+            android:textSize="@dimen/dimen15"
+            android:background="@drawable/habit_list"
             />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

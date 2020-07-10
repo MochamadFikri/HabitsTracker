@@ -8,22 +8,12 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
+        android:background="#FFF"
         >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Splash1"
-            android:fontFamily="@font/quicksandbold"
-            android:textStyle="bold"
-            android:textSize="40sp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Splash2"
-            android:textSize="20sp"
-            android:fontFamily="@font/quicksandlight"
-            android:layout_marginBottom="@dimen/dimen50"
+        <ImageView
+            android:layout_width="@dimen/dimen300"
+            android:layout_height="@dimen/dimen300"
+            android:background="@drawable/applogo"
             />
         <ProgressBar
             android:layout_width="wrap_content"
