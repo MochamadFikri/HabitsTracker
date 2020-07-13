@@ -39,3 +39,4 @@ class Fragment_list : Fragment() {
         fun newInstance(): Fragment_list = Fragment_list()
     }
 }
+
