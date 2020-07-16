@@ -1,3 +1,12 @@
 package com.example.habitstracker
 
-data class Habits(val nama:String?)
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+
+@Entity
+data class Habits (
+    @PrimaryKey @ColumnInfo(name = "nama")
+    var nama: String
+)

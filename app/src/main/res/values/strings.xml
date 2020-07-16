@@ -12,4 +12,8 @@
     <string name="welcome5">" Kita adalah apa yang kita kerjakan berulang-ulang, karena itu keunggulan bukanlah suatu perbuatan, melainkan kebiasaan " </string>
     <string name="welcome6">Aristoteles</string>
     <string name="welcome7">Mari Kita Mulai !</string>
+
+    <string name="hint_habits">Habits...</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Habit tidak disimpan karena kosong.</string>
 </resources>
