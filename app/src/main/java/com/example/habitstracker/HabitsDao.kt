@@ -1,22 +1,18 @@
 package com.example.habitstracker
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.lifecycle.LiveData
+import androidx.room.*
 
 
 @Dao
 interface HabitsDao {
-    @Insert
-    fun tambahHabits(habitsEntity: Habits?)
 
-    @Delete
-    fun hapusHabits(habitsEntity: Habits?)
+    @Query("SELECT * from habits_table ORDER BY nama ASC")
+    fun getAlphabetizedWords(): LiveData<List<Habits>>
 
-    @Query("SELECT * FROM Habits")
-    fun tampilSeluruhHabits(): List<Habits>
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insert(habits: Habits)
 
-    @Query("SELECT * FROM Habits WHERE nama LIKE :nama")
-    fun findByNama(nama: String?): List<Habits>
+    @Query("DELETE FROM habits_table")
+    suspend fun deleteAll()
 }

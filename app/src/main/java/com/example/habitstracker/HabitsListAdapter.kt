@@ -15,20 +15,22 @@ class HabitsListAdapter internal constructor(
     private var habits = emptyList<Habits>() // Cached copy of words
 
     inner class HabitsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val habitsItemView: TextView = itemView.findViewById(R.id.hablist)
+        val habitsItemNama: TextView = itemView.findViewById(R.id.textNama)
+        val habitsItemWaktu: TextView = itemView.findViewById(R.id.textWaktu)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HabitsViewHolder {
-        val itemView = inflater.inflate(R.layout.list_list, parent, false)
+        val itemView = inflater.inflate(R.layout.habits_item, parent, false)
         return HabitsViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: HabitsViewHolder, position: Int) {
         val current = habits[position]
-        holder.habitsItemView.text = current.nama
+        holder.habitsItemNama.text = current.nama
+        holder.habitsItemWaktu.text = current.waktu
     }
 
-    internal fun setWords(habits: List<Habits>) {
+    internal fun setHabits(habits: List<Habits>) {
         this.habits = habits
         notifyDataSetChanged()
     }

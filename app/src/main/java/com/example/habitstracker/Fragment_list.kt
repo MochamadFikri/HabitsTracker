@@ -1,21 +1,30 @@
 package com.example.habitstracker
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_list.*
 
 
 class Fragment_list : Fragment() {
-    private val habits : ArrayList<Habits> = ArrayList()
 
-    private var studentDatabase:HabitsDatabase? = null
+
+    private val newWordActivityRequestCode = 1
+    private lateinit var habitsViewModel: HabitsViewModel
+
+    lateinit var mContext: Context
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,48 +37,50 @@ class Fragment_list : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val mNama = "HABIT 2"
+        habitsViewModel = ViewModelProvider(this).get(HabitsViewModel::class.java)
 
-        val habit = Habits(mNama)
+        val adapter = HabitsListAdapter(mContext)
+        recyclerview.adapter = adapter
+        recyclerview.layoutManager = LinearLayoutManager(mContext)
+        habitsViewModel.allHabits.observe(viewLifecycleOwner, Observer { words ->
+            // Update the cached copy of the words in the adapter.
+            words?.let { adapter.setHabits(it) }
+        })
 
-        println("${habit}")
+
+        fab.setOnClickListener {
+            val intent = Intent(mContext, HabitsAdd::class.java)
+            startActivityForResult(intent, newWordActivityRequestCode)
+        }
 
     }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
 
+        var id_reply:String = data?.getStringExtra(HabitsAdd.ID_REPLY).toString()
+        var nama_reply:String = data?.getStringExtra(HabitsAdd.NAMA_REPLY).toString()
+        var waktu_reply:String = data?.getStringExtra(HabitsAdd.WAKTU_REPLY).toString()
+
+        if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK) {
+            let {
+                val habits = Habits(id_reply,nama_reply,waktu_reply)
+                habitsViewModel.insert(habits)
+            }
+        } else {
+            Toast.makeText(
+                mContext,
+                R.string.empty_not_saved,
+                Toast.LENGTH_LONG).show()
+        }
+    }
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        mContext = context
+    }
 
     companion object{
         fun newInstance(): Fragment_list = Fragment_list()
     }
 }
 
-class ViewHolderList(inflater: LayoutInflater, parent: ViewGroup):
-    RecyclerView.ViewHolder(inflater.inflate(R.layout.list_list,parent,false)){
-
-    private var mNama: TextView? = null
-
-    init{
-        mNama = itemView.findViewById(R.id.hablist)
-    }
-
-    fun bind(habits: Habits){
-        mNama?.text = habits.nama
-    }
-}
-
-class Adapter_list(private val list:List<Habits>) : RecyclerView.Adapter<ViewHolderList>(){
-    class Holder(val view: View):RecyclerView.ViewHolder(view)
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderList {
-        val inflater = LayoutInflater.from(parent.context)
-        return ViewHolderList(inflater, parent)
-    }
-
-    override fun getItemCount(): Int = list?.size
-
-    override fun onBindViewHolder(holder: ViewHolderList, position: Int) {
-        val habits: Habits = list[position]
-        holder.bind(habits)
-    }
-
-}
 

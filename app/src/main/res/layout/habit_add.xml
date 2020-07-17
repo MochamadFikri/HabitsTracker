@@ -6,20 +6,60 @@
     android:padding="@dimen/dimen50"
     >
 
+    <TextView
+        android:id="@+id/hari"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Tambah Habit"
+        android:layout_marginBottom="@dimen/dimen20"
+        android:fontFamily="@font/quicksandbold"
+        android:textSize="25sp"
+        />
+
+    <EditText
+        android:id="@+id/habits_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Id Habit"
+        android:inputType="textAutoComplete"
+        android:layout_marginBottom="@dimen/dimen10"
+        android:padding="@dimen/dimen15"
+        android:textSize="18sp" />
     <EditText
         android:id="@+id/habits_nama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hint_habits"
+        android:hint="Nama Habit"
         android:inputType="textAutoComplete"
+        android:layout_marginBottom="@dimen/dimen10"
         android:padding="@dimen/dimen15"
         android:textSize="18sp" />
-
+    <EditText
+        android:id="@+id/habits_waktu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Waktu Habit"
+        android:inputType="textAutoComplete"
+        android:padding="@dimen/dimen15"
+        android:layout_marginBottom="@dimen/dimen20"
+        android:textSize="18sp" />
     <Button
         android:id="@+id/button_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/button_save"
+        android:text="Simpan"
+        android:textColor="#FFF"
+        android:background="@drawable/habit_add"
+        android:layout_marginBottom="@dimen/dimen10"
+        android:padding="@dimen/dimen10" />
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Batal"
+        android:textColor="#FFF"
+        android:background="@drawable/habit_cancel"
         android:padding="@dimen/dimen10" />
 
 </LinearLayout>

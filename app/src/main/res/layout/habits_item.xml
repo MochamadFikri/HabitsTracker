@@ -27,18 +27,19 @@
                     android:gravity="center"
                     >
                     <TextView
-                        android:id="@+id/hablist"
+                        android:id="@+id/textNama"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"
                         android:textColor="#FFF"
+                        android:text="Nama"
                         android:fontFamily="@font/quicksandbold"
                         />
                     <TextView
-                        android:id="@+id/habwak"
+                        android:id="@+id/textWaktu"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Harian pada pukul 04.00 AM"
+                        android:text="Harian Pukul 04.00"
                         android:fontFamily="@font/quicksandregular"
                         android:textSize="10sp"
                         />

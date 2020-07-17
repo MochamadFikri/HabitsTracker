@@ -12,8 +12,8 @@ import java.text.SimpleDateFormat
 class Fragment_today : Fragment() {
 
     val listHabits = listOf(
-        Habits("Meminum Coklat Panas"),
-        Habits("Bermain Tiktaktuk")
+        Habits("HB099","Meminum Coklat Panas","19.00"),
+        Habits("HB100","Bermain Tiktaktuk","20.00")
     )
 
     var currentDay : String = SimpleDateFormat("E", java.util.Locale.getDefault()).format(
@@ -40,11 +40,6 @@ class Fragment_today : Fragment() {
         tanggal.setText(tanggalSekarang+" "+bulanSekarang+" "+tahunSekarang)
         super.onViewCreated(view, savedInstanceState)
 
-        recycle_list.apply {
-            layoutManager = LinearLayoutManager(activity)
-
-            adapter = Adapter_list(listHabits)
-        }
     }
 
     override fun onCreateView(
