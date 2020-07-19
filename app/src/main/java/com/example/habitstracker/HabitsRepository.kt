@@ -11,4 +11,14 @@ class HabitsRepository(private val habitsDao: HabitsDao) {
     suspend fun insert(habits: Habits) {
         habitsDao.insert(habits)
     }
+
+
+    suspend fun update(habits: Habits) {
+        habitsDao.update(habits)
+    }
+
+
+    suspend fun delete(habits: Habits) {
+        habitsDao.delete(habits)
+    }
 }

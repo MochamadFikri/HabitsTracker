@@ -8,7 +8,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "habits_table")
 class Habits(
     @PrimaryKey
-    @ColumnInfo(name = "kode") val kode: String,
     @ColumnInfo(name = "nama") val nama: String,
     @ColumnInfo(name = "waktu") val waktu: String
 )

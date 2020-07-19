@@ -12,8 +12,8 @@ import java.text.SimpleDateFormat
 class Fragment_today : Fragment() {
 
     val listHabits = listOf(
-        Habits("HB099","Meminum Coklat Panas","19.00"),
-        Habits("HB100","Bermain Tiktaktuk","20.00")
+        Habits("Meminum Coklat Panas","19.00"),
+        Habits("Bermain Tiktaktuk","20.00")
     )
 
     var currentDay : String = SimpleDateFormat("E", java.util.Locale.getDefault()).format(

@@ -13,19 +13,24 @@ import kotlinx.android.synthetic.main.habit_add.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-class HabitsAdd : AppCompatActivity() {
+class HabitsUpdate : AppCompatActivity() {
 
     private lateinit var editHabitsNama: EditText
     private lateinit var editHabitsWaktu: EditText
     private lateinit var button_pilih: Button
 
+
+
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.habit_add)
+        setContentView(R.layout.habit_update)
 
         editHabitsNama = findViewById(R.id.habits_nama)
         editHabitsWaktu = findViewById(R.id.habits_waktu)
         button_pilih = findViewById(R.id.button_pilih)
+
+        editHabitsNama.setText(intent.getStringExtra("NAMA_HABIT").toString())
+        editHabitsWaktu.setText(intent.getStringExtra("WAKTU_HABIT").toString())
 
         editHabitsWaktu.setInputType(TYPE_NULL)
 
@@ -57,6 +62,17 @@ class HabitsAdd : AppCompatActivity() {
         }
 
 
+        val button_delete = findViewById<Button>(R.id.button_delete)
+        button_delete.setOnClickListener {
+            val intent = Intent()
+            intent.putExtra(NAMA_REPLY, intent.getStringExtra("NAMA_HABIT").toString())
+            intent.putExtra(WAKTU_REPLY, intent.getStringExtra("WAKTU_HABIT").toString())
+            intent.putExtra(DELETE, "1")
+
+            setResult(Activity.RESULT_CANCELED, intent)
+            finish()
+        }
+
         val button_cancel = findViewById<Button>(R.id.button_cancel)
         button_cancel.setOnClickListener {
             finish()
@@ -66,5 +82,6 @@ class HabitsAdd : AppCompatActivity() {
     companion object {
         const val NAMA_REPLY = "com.example.android.habitslistsql.NAMA"
         const val WAKTU_REPLY = "com.example.android.habitslistsql.WAKTU"
+        const val DELETE = "com.example.android.habitslistsql.DELETE"
     }
 }

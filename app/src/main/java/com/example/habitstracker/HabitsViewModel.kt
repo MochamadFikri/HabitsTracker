@@ -28,4 +28,10 @@ class HabitsViewModel(application: Application) : AndroidViewModel(application) 
     fun insert(habits: Habits) = viewModelScope.launch(Dispatchers.IO) {
         repository.insert(habits)
     }
+    fun update(habits: Habits) = viewModelScope.launch(Dispatchers.IO) {
+        repository.update(habits)
+    }
+    fun delete(habits: Habits) = viewModelScope.launch(Dispatchers.IO) {
+        repository.delete(habits)
+    }
 }

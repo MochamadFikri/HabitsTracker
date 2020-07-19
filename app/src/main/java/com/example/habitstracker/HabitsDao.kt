@@ -15,4 +15,10 @@ interface HabitsDao {
 
     @Query("DELETE FROM habits_table")
     suspend fun deleteAll()
+
+    @Update
+    suspend fun update(habits: Habits)
+
+    @Delete
+    suspend fun delete(habits: Habits)
 }
