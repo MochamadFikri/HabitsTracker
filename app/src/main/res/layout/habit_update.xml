@@ -67,6 +67,7 @@
         android:text="Hapus"
         android:textColor="#FFF"
         android:background="@drawable/habit_cancel"
+        android:layout_marginBottom="@dimen/dimen10"
         android:padding="@dimen/dimen10" />
     <Button
         android:id="@+id/button_cancel"

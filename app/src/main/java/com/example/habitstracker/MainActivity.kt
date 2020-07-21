@@ -14,13 +14,18 @@ class MainActivity : AppCompatActivity() {
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId){
-            R.id.nav_today -> {
-                val fragment = Fragment_today.newInstance()
+//            R.id.nav_today -> {
+//                val fragment = Fragment_today.newInstance()
+//                addFragment(fragment)
+//                return@OnNavigationItemSelectedListener true
+//            }
+            R.id.nav_list -> {
+                val fragment = Fragment_list.newInstance()
                 addFragment(fragment)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.nav_list -> {
-                val fragment = Fragment_list.newInstance()
+            R.id.nav_info -> {
+                val fragment = Fragment_info.newInstance()
                 addFragment(fragment)
                 return@OnNavigationItemSelectedListener true
             }
@@ -41,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
-        val fragment = Fragment_today.newInstance()
+        val fragment = Fragment_list.newInstance()
         addFragment(fragment)
     }
 }

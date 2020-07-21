@@ -9,6 +9,7 @@ import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import kotlinx.android.synthetic.main.habit_add.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -18,12 +19,14 @@ class HabitsUpdate : AppCompatActivity() {
     private lateinit var editHabitsNama: EditText
     private lateinit var editHabitsWaktu: EditText
     private lateinit var button_pilih: Button
+    private var delete: String = "1"
 
 
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.habit_update)
+
 
         editHabitsNama = findViewById(R.id.habits_nama)
         editHabitsWaktu = findViewById(R.id.habits_waktu)
@@ -54,8 +57,10 @@ class HabitsUpdate : AppCompatActivity() {
             } else {
                 val habitsNama = editHabitsNama.text.toString()
                 val habitsWaktu = editHabitsWaktu.text.toString()
+                delete = "0"
                 intent.putExtra(NAMA_REPLY, habitsNama)
                 intent.putExtra(WAKTU_REPLY, habitsWaktu)
+                intent.putExtra(DELETE_REPLY, delete)
                 setResult(Activity.RESULT_OK, intent)
             }
             finish()
@@ -65,11 +70,16 @@ class HabitsUpdate : AppCompatActivity() {
         val button_delete = findViewById<Button>(R.id.button_delete)
         button_delete.setOnClickListener {
             val intent = Intent()
-            intent.putExtra(NAMA_REPLY, intent.getStringExtra("NAMA_HABIT").toString())
-            intent.putExtra(WAKTU_REPLY, intent.getStringExtra("WAKTU_HABIT").toString())
-            intent.putExtra(DELETE, "1")
 
-            setResult(Activity.RESULT_CANCELED, intent)
+            val habitsNama = editHabitsNama.text.toString()
+            val habitsWaktu = editHabitsWaktu.text.toString()
+            delete = "1"
+
+            intent.putExtra(NAMA_REPLY, habitsNama)
+            intent.putExtra(WAKTU_REPLY, habitsWaktu)
+            intent.putExtra(DELETE_REPLY, delete)
+            setResult(Activity.RESULT_OK, intent)
+
             finish()
         }
 
@@ -82,6 +92,6 @@ class HabitsUpdate : AppCompatActivity() {
     companion object {
         const val NAMA_REPLY = "com.example.android.habitslistsql.NAMA"
         const val WAKTU_REPLY = "com.example.android.habitslistsql.WAKTU"
-        const val DELETE = "com.example.android.habitslistsql.DELETE"
+        const val DELETE_REPLY = "com.example.android.habitslistsql.DELETE"
     }
 }

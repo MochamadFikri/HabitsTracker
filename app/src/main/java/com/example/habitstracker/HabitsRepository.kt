@@ -19,6 +19,6 @@ class HabitsRepository(private val habitsDao: HabitsDao) {
 
 
     suspend fun delete(habits: Habits) {
-        habitsDao.delete(habits)
+        habitsDao.delete(habits.nama)
     }
 }

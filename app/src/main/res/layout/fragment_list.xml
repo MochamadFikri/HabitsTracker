@@ -10,22 +10,53 @@
     <LinearLayout
         android:id="@+id/welcome2_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="#FFF"
         android:orientation="vertical"
         >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FFF"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dimen20"
+            android:background="#8ABAAE"
+            android:paddingTop="@dimen/dimen30"
+            >
+            <TextView
+                android:id="@+id/hari"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="SELASA"
+                android:textColor="#FFF"
+                android:fontFamily="@font/quicksandbold"
+                android:textSize="15sp"
+                />
+            <TextView
+                android:id="@+id/tanggal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="07 Juli 2020"
+                android:textColor="#FFF"
+                android:fontFamily="@font/quicksandbold"
+                android:textSize="30sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#8ABAAE"
             android:orientation="vertical"
             >
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="@dimen/dimen30"
+                android:background="@drawable/welcome2"
                 >
                 <TextView
                     android:layout_width="wrap_content"
@@ -43,6 +74,7 @@
                     android:outlineAmbientShadowColor="#B8D5CD"
                     android:outlineSpotShadowColor="#B8D5CD"
                     />
+
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

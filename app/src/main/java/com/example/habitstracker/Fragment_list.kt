@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -19,7 +18,11 @@ class Fragment_list : Fragment(), HabitsListAdapter.onItemClickListener {
 
 
     private val newHabitsActivityRequestCode = 1
-    private val updateHabitsActivityRequestCode = 2
+    private var updateHabitsActivityRequestCode = 2
+
+    private val deleteya = "1"
+    private var deletetidak = "0"
+
     private lateinit var habitsViewModel: HabitsViewModel
 
     private var habits = listOf<Habits>()
@@ -61,28 +64,31 @@ class Fragment_list : Fragment(), HabitsListAdapter.onItemClickListener {
 
         var nama_reply:String = data?.getStringExtra(HabitsAdd.NAMA_REPLY).toString()
         var waktu_reply:String = data?.getStringExtra(HabitsAdd.WAKTU_REPLY).toString()
-        var delete:String = data?.getStringExtra(HabitsUpdate.DELETE).toString()
 
-        if ( delete == "1") {
-            let {
-                val habits = Habits(nama_reply,waktu_reply)
-                habitsViewModel.delete(habits)
-            }
-        } else if (requestCode == updateHabitsActivityRequestCode && resultCode == Activity.RESULT_OK) {
-            let {
-                val habits = Habits(nama_reply,waktu_reply)
-                habitsViewModel.update(habits)
-            }
-        } else if (requestCode == newHabitsActivityRequestCode && resultCode == Activity.RESULT_OK) {
+        var delete = data?.getStringExtra(HabitsUpdate.DELETE_REPLY).toString()
+
+        if (requestCode == newHabitsActivityRequestCode && resultCode == Activity.RESULT_OK) {
             let {
                 val habits = Habits(nama_reply,waktu_reply)
                 habitsViewModel.insert(habits)
             }
-        } else {
-            Toast.makeText(
-                mContext,
-                R.string.empty_not_saved,
-                Toast.LENGTH_LONG).show()
+        }else if (requestCode == updateHabitsActivityRequestCode && resultCode == Activity.RESULT_OK) {
+            val habits = Habits(nama_reply, waktu_reply)
+            if(delete == "1") {
+                let {
+                    println("MASHUUUUUUUUUUK")
+                    println(delete)
+                    habitsViewModel.delete(habits)
+                }
+            }else{
+                let {
+                    println(delete)
+                    println("ORA   MASHUUUUUUUUUUK")
+                    habitsViewModel.update(habits)
+                }
+            }
+        } else  {
+
         }
     }
     override fun onAttach(context: Context) {

@@ -25,7 +25,11 @@
         <activity android:name=".Walkthrough"></activity>
         <activity android:name=".HabitsAdd"></activity>
         <activity android:name=".HabitsUpdate"></activity>
-        <receiver android:name=".AlarmBroadcastReceiver"/>
+        <activity android:name=".Fragment_info"></activity>
+        <receiver
+            android:name=".AlarmReceiver"
+            android:enabled="true"
+            android:exported="false" />
     </application>
 
 

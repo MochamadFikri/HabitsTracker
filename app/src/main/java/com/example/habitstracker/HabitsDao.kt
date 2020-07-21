@@ -19,6 +19,6 @@ interface HabitsDao {
     @Update
     suspend fun update(habits: Habits)
 
-    @Delete
-    suspend fun delete(habits: Habits)
+    @Query("DELETE FROM habits_table where nama = :nama")
+    suspend fun delete(nama:String)
 }
