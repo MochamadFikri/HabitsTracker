@@ -1,4 +1,4 @@
-package com.example.habitstracker
+package com.mochamadfghd.habitstracker
 
 import android.content.Intent
 import android.content.SharedPreferences

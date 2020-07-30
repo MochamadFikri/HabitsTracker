@@ -33,5 +33,4 @@
             android:textSize="@dimen/dimen15"
             />
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

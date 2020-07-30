@@ -5,10 +5,10 @@
     <string name="Splash1">Habits Tracker</string>
     <string name="Splash2">Splash Screen</string>
 
-    <string name="welcome1">Jadwalkan dan Ingatkan Kapanpun</string>
-    <string name="welcome2">Habits Tracker adalah aplikasi untuk membangun sebuah Habit dengan cara menjadwalkan, mengingatkan dan memantau kegiatan anda sehingga menjadi sebuah habit.</string>
-    <string name="welcome3">Tapi apa itu Habits ?</string>
-    <string name="welcome4">Habits adalah segala sesuatu yang kita lakukan secara otomatis, bahkan kita melakukannya tanpa berpikir atau suatu aktifitas yang dilakukan terus menerus sehingga menjadi bagian dari kita.</string>
+    <string name="welcome1">Catat Kegiatan Kapanpun Dimanapun</string>
+    <string name="welcome2">Habits Tracker adalah aplikasi untuk membangun sebuah Habit dengan cara mencatat aktifitas anda sehingga anda teringatkan dan aktivitas tersebut menjadi sebuah habit. \n \n \n Swipe untuk lanjut >>></string>
+    <string name="welcome3">Tapi apa itu Habit ?</string>
+    <string name="welcome4">Habit adalah segala sesuatu yang kita lakukan secara otomatis, bahkan kita melakukannya tanpa berpikir atau suatu aktifitas yang dilakukan terus menerus sehingga menjadi bagian dari kita. \n \n \n Swipe untuk lanjut >>></string>
     <string name="welcome5">" Kita adalah apa yang kita kerjakan berulang-ulang, karena itu keunggulan bukanlah suatu perbuatan, melainkan kebiasaan " </string>
     <string name="welcome6">Aristoteles</string>
     <string name="welcome7">Mari Kita Mulai !</string>
@@ -16,4 +16,8 @@
     <string name="hint_habits">Habits...</string>
     <string name="button_save">Save</string>
     <string name="empty_not_saved">Habit tidak disimpan karena kosong.</string>
+
+    <string name="info1">Bagaimana cara menggunakan aplikasi ini ?</string>
+    <string name="info2">1. Tambahkan Aktivitas yang ingin anda jadikan Habit. \n 2. Ubah apabila terjadi kesalahan. \n 3. Hapus apabila merasa aktivitas anda telah menjadi Habit</string>
+    <string name="info3">Para peneliti menemukan bahwa waktunya bervariasi, antara 18 hingga 254 hari, tergantung pada masing-masing individu, walaupun rata-rata memerlukan waktu 66 hari</string>
 </resources>

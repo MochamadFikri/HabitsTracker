@@ -1,4 +1,4 @@
-package com.example.habitstracker
+package com.mochamadfghd.habitstracker
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

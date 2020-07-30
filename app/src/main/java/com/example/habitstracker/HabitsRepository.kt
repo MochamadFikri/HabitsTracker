@@ -1,4 +1,4 @@
-package com.example.habitstracker
+package com.mochamadfghd.habitstracker
 
 import androidx.lifecycle.LiveData
 
@@ -19,6 +19,6 @@ class HabitsRepository(private val habitsDao: HabitsDao) {
 
 
     suspend fun delete(habits: Habits) {
-        habitsDao.delete(habits.nama)
+        habitsDao.delete(habits.id)
     }
 }

@@ -1,4 +1,4 @@
-package com.example.habitstracker
+package com.mochamadfghd.habitstracker
 
 import android.content.Context
 import android.os.Bundle
@@ -19,12 +19,18 @@ class Fragment_info : Fragment() {
         return inflater.inflate(R.layout.fragment_info, container, false)
     }
 
-    companion object{
-        fun newInstance(): Fragment_info{
+    companion object {
+        fun newInstance(): Fragment_info {
             val fragment = Fragment_info()
             val args = Bundle()
             fragment.arguments = args
             return fragment
         }
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+        mContext = context
     }
 }

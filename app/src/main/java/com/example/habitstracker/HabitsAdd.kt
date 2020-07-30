@@ -1,4 +1,4 @@
-package com.example.habitstracker
+package com.mochamadfghd.habitstracker
 
 import android.app.Activity
 import android.app.TimePickerDialog
@@ -9,7 +9,6 @@ import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.habit_add.*
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -34,7 +33,6 @@ class HabitsAdd : AppCompatActivity() {
             val timeSetListener = TimePickerDialog.OnTimeSetListener { timePicker, hour, minute ->
                 cal.set(Calendar.HOUR_OF_DAY, hour)
                 cal.set(Calendar.MINUTE, minute)
-                val timestamp = cal.timeInMillis / 1000
                 editHabitsWaktu.setText(SimpleDateFormat("HH:mm").format(cal.time))
             }
             TimePickerDialog(this, timeSetListener, cal.get(Calendar.HOUR_OF_DAY), cal.get(Calendar.MINUTE), true).show()
@@ -47,8 +45,10 @@ class HabitsAdd : AppCompatActivity() {
             if (TextUtils.isEmpty(editHabitsNama.text) || TextUtils.isEmpty(editHabitsWaktu.text)) {
                 setResult(Activity.RESULT_CANCELED, intent)
             } else {
+                val habitsId = Calendar.getInstance().timeInMillis.toString()
                 val habitsNama = editHabitsNama.text.toString()
                 val habitsWaktu = editHabitsWaktu.text.toString()
+                intent.putExtra(ID_REPLY, habitsId)
                 intent.putExtra(NAMA_REPLY, habitsNama)
                 intent.putExtra(WAKTU_REPLY, habitsWaktu)
                 setResult(Activity.RESULT_OK, intent)
@@ -64,6 +64,7 @@ class HabitsAdd : AppCompatActivity() {
     }
 
     companion object {
+        const val ID_REPLY = "com.example.android.habitslistsql.ID"
         const val NAMA_REPLY = "com.example.android.habitslistsql.NAMA"
         const val WAKTU_REPLY = "com.example.android.habitslistsql.WAKTU"
     }

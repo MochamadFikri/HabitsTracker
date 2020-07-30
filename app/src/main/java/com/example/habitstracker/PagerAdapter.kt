@@ -1,8 +1,6 @@
-package com.example.habitstracker
+package com.mochamadfghd.habitstracker
 
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.RecyclerView
-import android.view.ViewGroup
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 

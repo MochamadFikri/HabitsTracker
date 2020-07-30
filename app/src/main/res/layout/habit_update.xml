@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Ubah Habit"
-        android:layout_marginBottom="@dimen/dimen20"
+        android:layout_marginBottom="@dimen/dimen60"
         android:fontFamily="@font/quicksandbold"
         android:textSize="25sp"
         />
@@ -31,7 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginBottom="@dimen/dimen20"
+        android:layout_marginBottom="@dimen/dimen60"
         >
         <EditText
             android:id="@+id/habits_waktu"
@@ -78,4 +78,13 @@
         android:background="@drawable/habit_cancel"
         android:padding="@dimen/dimen10" />
 
+    <TextView
+        android:id="@+id/idhab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/dimen60"
+        android:fontFamily="@font/quicksandbold"
+        android:textSize="0sp"
+        />
 </LinearLayout>

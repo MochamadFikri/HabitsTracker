@@ -1,24 +1,17 @@
-package com.example.habitstracker
+package com.mochamadfghd.habitstracker
 
-import android.content.SharedPreferences
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-//    private val content: FrameLayout? = null
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId){
-//            R.id.nav_today -> {
-//                val fragment = Fragment_today.newInstance()
-//                addFragment(fragment)
-//                return@OnNavigationItemSelectedListener true
-//            }
             R.id.nav_list -> {
                 val fragment = Fragment_list.newInstance()
                 addFragment(fragment)

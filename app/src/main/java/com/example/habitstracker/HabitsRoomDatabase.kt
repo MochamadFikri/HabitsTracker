@@ -1,4 +1,4 @@
-package com.example.habitstracker
+package com.mochamadfghd.habitstracker
 
 import android.content.Context
 import androidx.room.Database
@@ -7,9 +7,8 @@ import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import kotlin.reflect.KParameter
 
-@Database(entities = arrayOf(Habits::class), version = 3, exportSchema = false)
+@Database(entities = arrayOf(Habits::class), version = 5, exportSchema = false)
 abstract class HabitsRoomDatabase : RoomDatabase() {
 
     abstract fun habitsDao(): HabitsDao
@@ -23,10 +22,7 @@ abstract class HabitsRoomDatabase : RoomDatabase() {
             INSTANCE?.let { database ->
                 scope.launch {
                     var habitsDao = database.habitsDao()
-                    //habitsDao.deleteAll()
-                    // Add sample words.
-                    //var habits = Habits("Sholat Subuh","04:00")
-                    //habitsDao.insert(habits)
+
                 }
             }
         }

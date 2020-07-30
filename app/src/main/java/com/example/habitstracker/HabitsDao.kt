@@ -1,4 +1,4 @@
-package com.example.habitstracker
+package com.mochamadfghd.habitstracker
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
@@ -19,6 +19,6 @@ interface HabitsDao {
     @Update
     suspend fun update(habits: Habits)
 
-    @Query("DELETE FROM habits_table where nama = :nama")
-    suspend fun delete(nama:String)
+    @Query("DELETE FROM habits_table where id = :id")
+    suspend fun delete(id:String)
 }
