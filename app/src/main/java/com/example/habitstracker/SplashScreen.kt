@@ -6,6 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 
+// NIM   : 10117198
+// Nama  : Mochamad Fikri Fadila Akbar
+// Kelas : IF5
+
 class SplashScreen : AppCompatActivity() {
 
     lateinit var handler:Handler

@@ -7,6 +7,10 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
+// NIM   : 10117198
+// Nama  : Mochamad Fikri Fadila Akbar
+// Kelas : IF5
+
 class MainActivity : AppCompatActivity() {
 
 

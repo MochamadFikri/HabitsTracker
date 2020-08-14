@@ -7,6 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
+// NIM   : 10117198
+// Nama  : Mochamad Fikri Fadila Akbar
+// Kelas : IF5
+
 class Fragment_info : Fragment() {
 
     private lateinit var mContext: Context

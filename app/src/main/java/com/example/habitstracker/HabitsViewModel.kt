@@ -7,6 +7,10 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
+// NIM   : 10117198
+// Nama  : Mochamad Fikri Fadila Akbar
+// Kelas : IF5
+
 class HabitsViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository: HabitsRepository

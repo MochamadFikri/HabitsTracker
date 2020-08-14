@@ -13,6 +13,10 @@ import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.*
 
+// NIM   : 10117198
+// Nama  : Mochamad Fikri Fadila Akbar
+// Kelas : IF5
+
 class HabitsUpdate : AppCompatActivity() {
 
     private lateinit var editHabitsNama: EditText

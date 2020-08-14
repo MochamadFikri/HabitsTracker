@@ -15,6 +15,9 @@ import kotlinx.android.synthetic.main.fragment_list.*
 import java.text.SimpleDateFormat
 import java.util.*
 
+// NIM   : 10117198
+// Nama  : Mochamad Fikri Fadila Akbar
+// Kelas : IF5
 
 class Fragment_list : Fragment(), HabitsListAdapter.onItemClickListener {
 
@@ -128,6 +131,8 @@ class Fragment_list : Fragment(), HabitsListAdapter.onItemClickListener {
         intent.putExtra("WAKTU_HABIT",habits.waktu)
         startActivityForResult(intent, updateHabitsActivityRequestCode)
     }
+
+    // Mengecek hari / menerjemahkan dari day ke hari
     private fun cekHari(){
         if(currentDay == "mon"){
             hariSekarang = "Senin"

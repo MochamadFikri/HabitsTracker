@@ -7,6 +7,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
+// NIM   : 10117198
+// Nama  : Mochamad Fikri Fadila Akbar
+// Kelas : IF5
+
 class HabitsListAdapter internal constructor(
     context: Context
 ) : RecyclerView.Adapter<HabitsListAdapter.HabitsViewHolder>() {

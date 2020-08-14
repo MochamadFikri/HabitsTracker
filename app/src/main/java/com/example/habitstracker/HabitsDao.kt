@@ -3,6 +3,9 @@ package com.mochamadfghd.habitstracker
 import androidx.lifecycle.LiveData
 import androidx.room.*
 
+// NIM   : 10117198
+// Nama  : Mochamad Fikri Fadila Akbar
+// Kelas : IF5
 
 @Dao
 interface HabitsDao {

@@ -8,6 +8,10 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
+// NIM   : 10117198
+// Nama  : Mochamad Fikri Fadila Akbar
+// Kelas : IF5
+
 @Database(entities = arrayOf(Habits::class), version = 5, exportSchema = false)
 abstract class HabitsRoomDatabase : RoomDatabase() {
 

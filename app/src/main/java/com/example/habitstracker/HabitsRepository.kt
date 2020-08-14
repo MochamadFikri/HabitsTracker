@@ -2,6 +2,10 @@ package com.mochamadfghd.habitstracker
 
 import androidx.lifecycle.LiveData
 
+// NIM   : 10117198
+// Nama  : Mochamad Fikri Fadila Akbar
+// Kelas : IF5
+
 class HabitsRepository(private val habitsDao: HabitsDao) {
 
     // Room executes all queries on a separate thread.
